@@ -1,0 +1,82 @@
+
+SQL> create table SUPPLIER(
+  2  supplierid number(10),
+  3  sname varchar(20),
+  4  scity varchar(20),
+  5  sphone number(10),
+  6  email varchar(50));
+
+Table created.
+
+SQL> insert into SUPPLIER values(
+  2  1,'dilip','chennai',
+  3  8999900000,
+  4  'dilip@abc.co.in');
+
+1 row created.
+
+SQL> insert into SUPPLIER values(
+  2  2,'tarun','madurai',
+  3  8999911111,
+  4  'tarun@xyz.com');
+
+1 row created.
+
+SQL> insert into SUPPLIER values(
+  2  3,'naresh','coimbatore',
+  3  8999922222,
+  4  'g.naresh@xyzl.com');
+
+1 row created.
+
+SQL> insert into SUPPLIER values(
+  2  4,'ganesan','trichy',
+  3  8999933333,
+  4  'ganesan_83@ijk.com');
+
+1 row created.
+
+
+
+SQL> CREATE TABLE ORDERS(
+     orderid number(10)primary key,
+  3  orderdate date,
+  4  custid number(10),
+  5  quantity number(10) check(quantity>0),
+  6  itemid number(10));
+
+Table created.
+
+SQL> insert into ORDERS values(
+  2  1,'12-JAN-04',
+  3  1001,30,25);
+
+1 row created.
+
+SQL> insert into ORDERS values(
+     2,'06-MAY-05',1202,38,24);
+
+1 row created.
+
+
+SQL> insert into ORDERS values(
+  2  3,'16-DEC-06',
+  3  1220,10,22);
+
+1 row created.
+
+SQL> insert into ORDERS values(
+     4,'21-MAY-0',1233,12,21);
+
+1 row created.
+
+SQL> SELECT *FROM ORDERS;
+
+   ORDERID ORDERDATE     CUSTID   QUANTITY     ITEMID
+---------- --------- ---------- ---------- ----------
+         1 12-JAN-04       1001         30         25
+           06-MAY-05       1202         38         24
+         3 16-DEC-06       1220         10         22
+         4 21-MAY-00       1233         12         21
+
+SQL>
